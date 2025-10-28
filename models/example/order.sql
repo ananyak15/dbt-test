@@ -2,10 +2,14 @@
 select 
     1 as order_id,
     100 as amount,
-    '2024-01-01'::date as order_date
+    'completed' as status
 union all
 select 
     2 as order_id,
     200 as amount,
-    '2024-01-02'::date as order_date
-    
+    'pending' as status
+union all
+select 
+    3 as order_id,
+    150 as amount,
+    'cancelled' as status
