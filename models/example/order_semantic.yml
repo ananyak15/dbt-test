@@ -15,11 +15,6 @@ semantic_models:
         expr: amount
 
     dimensions:
-      - name: order_status
+      - name: status
         type: categorical
         expr: status
-
-      - name: order_id_dim
-        type: categorical
-        expr: order_id
-  
