@@ -1,0 +1,25 @@
+semantic_models:
+  - name: orders
+    model: ref('order')
+    primary_entity: order
+
+    entities:
+      - name: order
+        type: primary
+        expr: order_id
+
+    measures:
+      - name: total_amount
+        description: "Sum of all order amounts"
+        agg: sum
+        expr: amount
+
+    dimensions:
+      - name: order_status
+        type: categorical
+        expr: status
+
+      - name: order_id_dim
+        type: categorical
+        expr: order_id
+  
